@@ -8,4 +8,18 @@ public class Range implements IntegerSequence{
     current = start;
   }
 
+  public void reset(){
+    current = start;
+  }
+  public int length(){
+    return 0;
+  }
+
+  public boolean hasNext(){
+    return false;
+  }
+
+  public int next(){
+    return 0;
+  }
 }
