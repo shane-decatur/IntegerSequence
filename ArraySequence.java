@@ -12,16 +12,23 @@ public class ArraySequence implements IntegerSequence{
   }
 
   public boolean hasNext(){
-    return false;
+    return currentIndex < data.length-1;
   }
 
   public int next(){
-    return 0;
+    if (!hasNext()){
+      throw new NoSuchElementException();
+    }
+    int temp = data[currentIndex];
+    currentIndex++;
+    return temp;
   }
 
   public int length(){
     return 0;
   }
 
-  public void reset(){ }
+  public void reset(){
+
+  }
 }
