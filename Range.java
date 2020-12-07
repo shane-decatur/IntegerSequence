@@ -3,6 +3,9 @@ public class Range implements IntegerSequence{
   private int start,end,current;
 
   public Range(int start, int end){
+    if (start > end){
+      throw new IllegalArgumentException();
+    }
     this.start = start;
     this.end = end + 1;
     current = start;
